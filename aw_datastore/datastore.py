@@ -11,7 +11,6 @@ from typing import (
 from aw_core.models import Event
 
 from .storages import AbstractStorage
-
 logger = logging.getLogger(__name__)
 
 
@@ -187,3 +186,5 @@ Inserted: {oldest_event}"""
 
     def replace(self, event_id, event):
         return self.ds.storage_strategy.replace(self.bucket_id, event_id, event)
+    
+
